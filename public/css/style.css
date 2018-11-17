@@ -1,0 +1,139 @@
+body {
+  font-family: 'Roboto';
+  font-size: 1.5em;
+}
+
+header {
+  display: grid;
+  color:rgb(94,97,111);
+  font-size: 40pt;
+  text-align: left;
+  padding: 10px;
+  /* margin-bottom: 1em; */
+  font-weight: 100;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#new-todo-text {
+  width: 420px;
+  margin: 15px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  /* border-width: 1px; */
+  font-weight: 400;
+  font-size: 1.5rem;
+  /* override to fill in input to match todos */
+  /* background-image: linear-gradient(rgb(242, 242, 242), rgb(242, 242, 242)), radial-gradient(circle at top left, #b60773, purple); */
+}
+
+#new-todo-text:focus {
+  outline: none;
+}
+.day {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: gr;
+  margin: 5px;
+}
+.month, .year {
+  font-size: 014pt;
+  margin: 5px;
+}
+.wrapper {
+  width: 500px;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  /* border: 2px solid transparent; */
+  background-origin: border-box;
+  box-shadow: 2px 2px 2px 2px grey;
+  background-clip: content-box, border-box;
+}
+
+#todos {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 15px;
+  color:rgb(94,97,111);
+  text-transform: uppercase;
+}
+
+.todo {
+  /* background-color: rgb(242, 242, 242); */
+  border-radius: 10px;
+  text-align: left;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 100;
+}
+
+.list-text {
+  flex: 1;
+  padding: 4px;
+  padding-left: 10px;
+}
+
+.delete,
+.submit {
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  color:rgb(44,197,225);
+}
+
+
+.completed {
+color: lightgray; 
+}
+.completed,
+.fancy-checkbox {
+  cursor: pointer;
+}
+
+/* custom icon checkboxes */
+.fancy-checkbox input[type="checkbox"],
+.fancy-checkbox .checked {
+  display: none;
+}
+
+.fancy-checkbox input[type="checkbox"]:checked~.checked {
+  display: inline-block;
+}
+
+.fancy-checkbox input[type="checkbox"]:checked~.unchecked {
+  display: none;
+}
+
+/* rounded border with a gradient */
+
+/* wrapper:focus {
+  border: 2px solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+} */
+
+/* media query for small screen */
+@media only screen and (max-width: 600px) {
+
+  .wrapper {
+      border: none;
+  }
+
+  .truncate {
+      width: 600px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+}
