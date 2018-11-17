@@ -1,22 +1,7 @@
 body {
+  background-image: url("https://dailytravelpill.com/wp-content/uploads/2018/07/tibumana-waterfall-bali-6.jpg");
   font-family: 'Roboto';
   font-size: 1.5em;
-}
-
-header {
-  display: grid;
-  color:rgb(94,97,111);
-  font-size: 40pt;
-  text-align: left;
-  padding: 10px;
-  /* margin-bottom: 1em; */
-  font-weight: 100;
-}
-
-.date {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 #new-todo-text {
@@ -35,26 +20,13 @@ header {
 #new-todo-text:focus {
   outline: none;
 }
-.day {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: gr;
-  margin: 5px;
-}
-.month, .year {
-  font-size: 014pt;
-  margin: 5px;
-}
+
 .wrapper {
   width: 500px;
-  height: 700px;
+  height: 900px;
   margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  /* border: 2px solid transparent; */
-  background-origin: border-box;
-  box-shadow: 2px 2px 2px 2px grey;
-  background-clip: content-box, border-box;
+  background-color: white;
+  opacity: .50;
 }
 
 #todos {
@@ -62,7 +34,7 @@ header {
   grid-template-rows: auto;
   grid-gap: 20px;
   padding: 15px;
-  color:rgb(94,97,111);
+  color:black;
   text-transform: uppercase;
 }
 
@@ -128,12 +100,5 @@ color: lightgray;
 
   .wrapper {
       border: none;
-  }
-
-  .truncate {
-      width: 600px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
   }
 }
