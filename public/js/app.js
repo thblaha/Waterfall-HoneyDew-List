@@ -19,14 +19,14 @@ $(function () {
     const output = $(outputElement);
 
     const todoEl = $('<div>').addClass('todo')
-      .attr('data-id', todo._id)
-      .addClass(todo.completed ? 'completed' : 'incomplete');
+      .attr('data-id', todo.id)
+      .addClass(todo.complete ? 'completed' : 'incomplete');
 
     todoEl.append(
       $('<span>').text(todo.text).addClass('list-text'),
       $('<button>')
       .addClass('delete')
-      .append('<i>').addClass(todo.completed ? 'far fa-times-circle' : 'far fa-circle')
+      .append('<i>').addClass(todo.complete ? 'far fa-times-circle' : 'far fa-circle')
     );
 
     output.append(todoEl);
@@ -103,7 +103,7 @@ $(function () {
         url: `/api/todos/${todoId}`,
         method: 'PUT',
         data: {
-          completed: true
+          complete: true
         },
       })
       .then(function (data) {

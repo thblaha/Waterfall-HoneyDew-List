@@ -41,25 +41,26 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(dbTodo) {
-      res.json(dbTodo);
+      res.json({success: true});
+      // res.json(dbTodo);
     });
 
   });
 
   // PUT route for updating todos. We can get the updated todo data from req.body
-  app.put("/api/todos", function(req, res) {
+  app.put("/api/todos/:id", function(req, res) {
 
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
     db.Todo.update({
-      text: req.body.text,
       complete: req.body.complete
     }, {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     }).then(function(dbTodo) {
-      res.json(dbTodo);
+      // res.json(dbTodo);
+      res.json({success: true})
     })
       .catch(function(err) {
       // Whenever a validation or flag fails, an error is thrown
