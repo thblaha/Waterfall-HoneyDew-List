@@ -23,10 +23,10 @@ $(function () {
       .addClass(todo.complete ? 'completed' : 'incomplete');
 
     todoEl.append(
-      $('<span>').text(todo.text).addClass('list-text'),
       $('<button>')
       .addClass('delete')
-      .append('<i>').addClass(todo.complete ? 'far fa-times-circle' : 'far fa-circle')
+      .append('<i>').addClass(todo.complete ? 'far fa-dot-circle' : 'far fa-circle'),
+      $('<span>').text(todo.text).addClass('list-text')
     );
 
     output.append(todoEl);
