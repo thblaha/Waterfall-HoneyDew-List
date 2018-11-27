@@ -1,18 +1,38 @@
+
 body {
-  background-image: url("https://dailytravelpill.com/wp-content/uploads/2018/07/tibumana-waterfall-bali-6.jpg");
-  object-fit: fill; 
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1488215545351-57e673dc3789?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=895a55bca2a8442b00b61c032fd9c0d4&auto=format&fit=crop&w=2823&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   font-family: 'Roboto';
-  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  
+}
+
+.title {
+  color: white;
+  padding-top:75px;
+  padding-left: 15px;
+  font-size: 2.5em;
+  font-weight: 100;
+}
+
+.bold {
+  font-family: 'Roboto';
+  font-size: 1em;
+  font-weight: 400;
 }
 
 #new-todo-text {
-  width: 420px;
+  width: 100%;
   margin: 15px;
-  padding: 10px;
   background: transparent;
+  box-sizing: border-box;
   border: none;
+  color: lightgray;
   border-bottom: 2px solid lightgray;
-  /* border-width: 1px; */
   font-weight: 400;
   font-size: 1.5rem;
   }
@@ -22,28 +42,26 @@ body {
 }
 
 .wrapper {
-  padding: 15px;
-  width: 500px;
-  height: 900px;
-  margin-left: auto;
+  display: grid;
+  grid-template-rows: 1fr 75px;
+  grid-column: 5/6;
+  height: 100%;
   background-color: white;
-  opacity: .70;
+  opacity: .85;
 }
 
 #todos {
-  display: grid;
-  grid-template-rows: auto;
-  grid-gap: 20px;
-  padding: 15px 10px;
+  padding: 10px;
+  padding-right: 0px;
+  padding-top:75px;
   color:black;
+  font-size: 1.5rem;
   text-transform: capitalize;
 }
 
 .todo {
-  /* background-color: rgb(242, 242, 242); */
-  border-radius: 10px;
   text-align: left;
-  padding: 15px;
+  padding: 5px;
   display: flex;
   align-items: center;
   font-weight: 400;
@@ -52,11 +70,13 @@ body {
 .list-text {
   flex: 1;
   padding: 4px;
-  padding-left: 0px;
   border-bottom: 2px solid lightgray;
   margin-left: 10px;
 }
-
+.completed, .incomplete {
+  padding-left: 10px;
+  margin-left: 10px;
+}
 .delete,
 .submit {
   padding: 0;
@@ -64,12 +84,13 @@ body {
   font: inherit;
   font-size: 1rem;
   cursor: pointer;
-  color: black;
+  color: lightgrey;
 } 
 .completed,
 .fancy-checkbox {
   cursor: pointer;
 }
+
 
 /* custom icon checkboxes */
 .fancy-checkbox input[type="checkbox"],
@@ -97,6 +118,21 @@ body {
 @media only screen and (max-width: 600px) {
 
   .wrapper {
-      border: none;
+      grid-template-rows: 150px 1fr;
+      grid-column: 2/6;
   }
+  #todos {
+    grid-row: 2;
+    padding-top: 1px;
+  }
+  .title, .subtitle {
+    display: none;
+  }
+  form {
+    grid-row: 1;
+    margin: 15px;
+    padding-top: 1px;
+    height: 50px;
+  }
+ 
 }
