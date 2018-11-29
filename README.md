@@ -5,3 +5,36 @@ This is a to-do list built with MySQL, Node, Javascript and CSS Grid. It is a fu
 
 # Getting Started
 To get the app up and running, you'll need to clone or fork the repository by clicking the Clone button, then navigate to your machine terminal window. Change the working directory to where you want the cloned directory to be made. Type ```git clone```,and paste the url from the Clone button click. It should resemble this: git clone github.com/YOUR-USERNAME/YOUR-REPOSITORY. Press enter. Your local clone will be created.
+
+# Prerequisites
+
+* Node
+* mySQL
+* Sequelize
+* Express 
+
+# Installing
+
+First, run the following commands in the terminal to install your packages:
+
+npm install --save express mySQL sequelize 
+npm start
+
+This should get your dev environment ready to run and make changes to the page.
+
+# Deployment 
+
+This app is currently hosted on Heroku.
+
+https://waterfall-honeydew.herokuapp.com/
+
+# Contributing
+
+Since this was a practice project, I will not be accepting contributions.
+
+# Author
+Veronica Blaha
+
+
+
+
